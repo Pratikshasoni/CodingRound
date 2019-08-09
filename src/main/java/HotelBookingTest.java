@@ -40,7 +40,7 @@ public class HotelBookingTest{
        By localityTextBox =By.id("Tags");
        getElement(driver,localityTextBox).sendKeys("Indiranagar, Bangalore");
       List<WebElement> location = driver.findElement(By.id("ui-id-1")).findElements(By.tagName("li"));
-    
+        location.get(0).click();
 
         new Select(travellerSelection).selectByVisibleText("1 room, 2 adults");
         searchButton.click();
